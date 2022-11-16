@@ -1,0 +1,162 @@
+/******** Google Fonts ********/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/******** Color Schemes ********/
+
+:root {
+  --c-softred: hsl(14, 88%, 65%);
+  --c-veryDarkGreyBlue: hsl(237, 12%, 33%);
+  --c-DarkGreyBlue: hsl(240, 6%, 50%);
+  --c-lightGreyBlue: hsl(240, 5%, 91%);
+  --ff-primary: 'Montserrat', sans-serif;
+}
+
+
+/******** CSS Resets ********/
+* {
+  padding: 0;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a:focus, a:hover {
+  outline: none;
+}
+
+a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: var(--c-black-text);
+  line-height: 18px;
+  font-weight: 400;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  width: 100vw;
+  background: linear-gradient(hsl(273,73%,66%),hsl(240,73%,65%));
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-primary);
+  margin-bottom: 0;
+}
+
+/******** Utility Classes ********/
+/*
+.container {
+  width: 100%;
+  max-width: 1360px;
+}
+*/
+
+.custom-pad {
+  padding: 60px 0;
+}
+
+/*----------start----------*/
+.wrapper{
+  background: rgb(226,226,226) url(../images/bg-pattern-desktop.svg)
+  no-repeat 1260% 65%;
+  border-radius: 30px;
+  height: 509px;
+  width: 920px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid: gap 6rem;
+}
+.ans{
+  display: none;
+}
+.active .ans{
+  display: block;
+  padding-bottom: 1.3rem;
+  color: var(--c-veryDarkGreyBlue);
+  transition: all 0.3s ease-in;
+}
+.demo {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--c-DarkGreyBlue);
+}
+img{
+  transform: rotate(0deg);
+  transform: all .3s ease-in;
+}
+.active img{
+  transform: rotate(180deg);
+  transform: all .3s ease-in;
+}
+.accordian-wrapper{
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+}
+.qusn-acordian{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.qusn-ans-acordian{
+  width: 350px;
+  border-bottom: 1px solid #e8e8ea;
+}
+.title-accordian{
+  font-size: 30px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 15px;
+}
+.title-qusn{
+  font-weight: 400;
+  font-size: 20px;
+  margin: 15px 0;
+  color: var(--c-DarkGreyBlue);
+}
+.qusn{
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.qusn img{
+  align-self: center;
+}
+.img-wrapper{
+  position: relative;
+}
+.img-wrapper-inner img{
+  position: absolute;
+  height: 60%;
+  top: 70px;
+  left: -150px;
+}
+.box{
+  position: absolute;
+  top: 48%;
+  left: -27%;
+}
